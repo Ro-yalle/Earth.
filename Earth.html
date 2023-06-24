@@ -1,0 +1,49 @@
+<!DICTYPE hhtml
+<html lang="en">
+  <head>
+    <style>
+    body{
+      background-color: #111;
+      padding-top: 200px;
+      
+    }
+    #earth{
+      background-image: url("t5.png");
+      width: 270px;
+      height: 270px;
+      /*a black shadow from left and ehite from white*/
+      box-shadow: insert 16px 0px 3px rgba (0,0,0,0.9), inset -3px 0 5px 2px rgba(255,255,255,0,16);
+      background-size: 190px;
+      margin: 80px auto;
+      border-radius: 50%;
+      position: relative;
+      animation-name: move, scale, rotate;
+      animation-duration: 4s, 5s;
+      animation-iteration-count: infinite,infinite,infinite;
+      animation-timing-function: ease-in-out, linear, linear;
+    }
+    @keyframes move{
+      0%{left : 200px;}
+      70%{left :-200px;}
+      100%{left :200px;}
+    }
+    @keyframes scale{
+      0%{transform :scale (1);}
+      32%{transform :scale (0.4); animation-timing-function :ease-in;}
+      70%{transform :scale (1); animation-timing-function :ease-in;}
+      75%{transform :scale (1.4); animation-timing-function :ease-in-out;}
+      86%{transform :scale (2);}
+      98%{transform :scale (1.2);}
+      100%{transform :scale (1);}
+    }
+    @keyframes rotate{
+      0%{background-position:30px;}
+      100%{background-position: 190px;}
+    }
+      
+</style>
+   </head>
+<body>
+  <div id="earth"></div>
+</body>
+</html>
